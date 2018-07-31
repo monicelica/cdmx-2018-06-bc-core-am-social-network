@@ -20,6 +20,10 @@ El estudio reporta que este grupo de madres internautas busca sitios electrónic
 
 En lo que respecta a las compras en línea, se informa que este sector es muy participativo en comparación con generaciones anteriores. Una de cada cuatro mamas de la generación adquiere productos por internet relacionados con ropa, electrónica, servicios financieros y cuidado personal, entre otros. 
 
+### **Ideación:**
+
+### **Ideación:**
+
 
 
 
@@ -98,6 +102,8 @@ https://www.figma.com/file/SacBbSk4Wst6RTG1jvTng0G3/Untitled?node-id=20%3A2
 ### **User testing:** 
 
 ### **Argumentacion de Visual Desing:** 
+#### **Login:** 
+
 
 
 ### **Referencias bibliograficas:** 
