@@ -99,9 +99,9 @@ db.collection('users').onSnapshot((querySnapshot) => {
     getcomentario.innerHTML += `
       <div class="comentario-publicado">
         <div class="comentario">
-          ${doc.data().comentario}
-          ${doc.data().email}
-          ${new Date(doc.data().fecha).toUTCString()}
+          <p class="autor">Publicado por: ${doc.data().email}</p>
+          <p class="texto">${doc.data().comentario}</p>
+          <p class="fecha">${new Date(doc.data().fecha).toUTCString()}</p>
         </div>
         <!--BOTONES-->
         <!--Por cada boton que se crea contiene los datos-->

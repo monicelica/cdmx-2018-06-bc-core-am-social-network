@@ -53,10 +53,29 @@ nav{
     margin-right: 11px;
 
 }
+
 .comentario{
-    line-height: 120px;
+    /* line-height: 120px; */
     outline: none;
 }
+
+.comentario .autor{
+  color: rgb(37, 27, 7);
+  text-align: left;
+}
+
+.comentario .texto{
+  color:black;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+.comentario .fecha{
+  color:gray;
+  text-align: right;
+}
+
 .img-comentario{
     margin-right: 11px;
     display: inline-block
