@@ -17,7 +17,7 @@ nav{
     background-color: #ffa500d1;
 }
 .elemento-nav .sec{
-    color: white; 
+    color: white;
 }
 .color-hamburguesa{
     color: white;
@@ -30,7 +30,7 @@ nav{
     border-radius: 5px;
     margin-top: 10px;
     background-color: white;
-} 
+}
 .comentario{
     width: 100%;
     height: 100px;
@@ -38,7 +38,7 @@ nav{
     border-right: none;
     border-left: none;
     margin-bottom: 10px;
-  
+
 }
 .publicar{
     float: right;
@@ -51,11 +51,31 @@ nav{
     border-radius: 10px;
     height: 190px;
     margin-right: 11px;
-    
+
 }
+
 .comentario{
-    line-height: 120px;
+    /* line-height: 120px; */
+    outline: none;
 }
+
+.comentario .autor{
+  color: rgb(37, 27, 7);
+  text-align: left;
+}
+
+.comentario .texto{
+  color:black;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+.comentario .fecha{
+  color:gray;
+  text-align: right;
+}
+
 .img-comentario{
     margin-right: 11px;
     display: inline-block
@@ -101,7 +121,7 @@ nav{
     margin-top: 40px;
     background-color: #cff3f3;
     border-radius: 10px;
-    
+
 }
 .img-especialistas{
     margin-right: 11px;
@@ -137,8 +157,8 @@ nav{
     .movil{
         display: none;
     }
-    
-   
+
+
 }
 @media only screen and (max-width: 768px){
     .titulo-recom {

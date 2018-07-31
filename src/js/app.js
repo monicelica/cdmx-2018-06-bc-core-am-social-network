@@ -1,12 +1,10 @@
 const registrar = () => {
-  let email = document.getElementById("email").value;
-  let password = document.getElementById("password").value;
-  //sie el usuario se regsitro de manera correcta se ejecutara la funcion verificar
+  let email = document.getElementById('email').value;
+  let password = document.getElementById('password').value;
+  // si el usuario se regsitro de manera correcta se ejecutara la funcion verificar
   firebase.auth().createUserWithEmailAndPassword(email, password)
-    .then(function () {
-      verificar()
-    })
-    .catch(function (error) {
+    .then(() => verificar())
+    .catch((error) => {
       // Handle Errors here.
       let errorCode = error.code;
       let errorMessage = error.message;
@@ -14,18 +12,18 @@ const registrar = () => {
       console.log(errorMessage);
       // ...
     });
-}
+};
 
 const loginGoogle = () => {
   let provider = new firebase.auth.GoogleAuthProvider();
-  firebase.auth().signInWithPopup(provider).then(function (result) {
+  firebase.auth().signInWithPopup(provider).then((result) => {
     // This gives you a Google Access Token. You can use it to access the Google API.
     let token = result.credential.accessToken;
     // The signed-in user info.
     let user = result.user;
-    console.log(result)
+    console.log(result);
     // ...
-  }).catch(function (error) {
+  }).catch((error) => {
     // Handle Errors here.
     let errorCode = error.code;
     let errorMessage = error.message;
@@ -34,21 +32,20 @@ const loginGoogle = () => {
     // The firebase.auth.AuthCredential type that was used.
     let credential = error.credential;
     // ...
-
   });
-}
+};
 
 const loginFace = () => {
   let provider = new firebase.auth.FacebookAuthProvider();
-  firebase.auth().signInWithPopup(provider).then(function (result) {
+  firebase.auth().signInWithPopup(provider).then((result) => {
     provider.addScope('public_profile');
     // This gives you a Google Access Token. You can use it to access the Google API.
     let token = result.credential.accessToken;
     // The signed-in user info.
     let user = result.user;
-    console.log(result)
+    console.log(result);
     // ...
-  }).catch(function (error) {
+  }).catch((error) => {
     // Handle Errors here.
     let errorCode = error.code;
     let errorMessage = error.message;
@@ -57,39 +54,34 @@ const loginFace = () => {
     // The firebase.auth.AuthCredential type that was used.
     let credential = error.credential;
     // ...
-
   });
-}
-
-
-
+};
 
 const ingreso = () => {
-  let emailIngreso = document.getElementById("emailIngreso").value;
-  let passwordIngreso = document.getElementById("passwordIngreso").value;
-  //location.href = "../views/view1.html";
-
+  let emailIngreso = document.getElementById('emailIngreso').value;
+  let passwordIngreso = document.getElementById('passwordIngreso').value;
+  // location.href = '../views/view1.html';
   firebase.auth().signInWithEmailAndPassword(emailIngreso, passwordIngreso)
-    .catch(function (error) {
+    .catch((error) => {
       // Handle Errors here.
       let errorCode = error.code;
       let errorMessage = error.message;
-      console.log(errorCode);
-      alert(errorMessage);
-      // ...
+      console.error(errorCode, errorMessage);
+      alert('Tu usuario o contraseña son incorrectos.');
     });
-}
-//verificar si existe un usuario y darle acceso
+};
+
+// verificar si existe un usuario y darle acceso
 const observador = () => {
-  //cuando un usuario ya esta registrado
-  firebase.auth().onAuthStateChanged(function (user) {
+  // cuando un usuario ya esta registrado
+  firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-      // console.log("existe usuario registrado");
+      // console.log('existe usuario registrado');
       // User is signed in.
       // aparece();
       // let displayName = user.displayName;
       // let email = user.email;
-      //cuando el usuario ya confirmo correo
+      // cuando el usuario ya confirmo correo
       // console.log(user.emailVerified);
       // let emailVerified = user.emailVerified;
       // let photoURL = user.photoURL;
@@ -107,60 +99,48 @@ const observador = () => {
       }));
 
       // redirecciona al timeline
-      return location.href = './views/timeline.html';
+      return location.href = './views/home.html';
     } else {
       // User is signed out.
-      console.log("Registra tu usuario");
-      // ...
+      console.log('Inicia sesión.');
     }
   });
-}
+};
 
 observador();
 
-const cerrar = () => {
-  firebase.auth().signOut()
-    .then(function () {
-      console.log("Saliendo...")
-    })
-    .catch(function (error) {
-      console.log(error);
-    })
-};
-//verificar el correo electronico con el que se esta registrando
-const verificar = () => {
-  //enviara correo para verificar
-  let user = firebase.auth().currentUser;
-  //usuario a quien se le mandara correo
-  user.sendEmailVerification()
-    .then(function () {
-      //si funciona se le mandara correo
-      // Email sent.
-      alert("Enviando correo..");
-    }).catch(function (error) {
-      // An error happened.
-      alert("error");
-    });
+// const cerrar = () => {
+//   firebase.auth().signOut()
+//     .then(() => {
+//       console.log('Saliendo...');
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//     });
+// };
 
-}
+// verificar el correo electronico con el que se esta registrando
+const verificar = () => {
+  // enviara correo para verificar
+  let user = firebase.auth().currentUser;
+  // usuario a quien se le mandara correo
+  user.sendEmailVerification()
+    .then(() => {
+      // si funciona se le mandara correo
+      // Email sent.
+      alert('Enviando correo..');
+    }).catch((error) => {
+      // An error happened.
+      alert('error');
+    });
+};
 
 const loginMovil = () => {
-  location.href = "views/ingresar.html";
+  location.href = 'views/ingresar.html';
   aparece();
-}
+};
 
 const registroMovil = () => {
-  location.href = "views/registro.html";
+  location.href = 'views/registro.html';
   aparece();
-}
-
-window.signOut = () =>{
-  firebase.auth().signOut()
-  .then(event =>{
-    location.href=('../index.html');
-    alert('Cerrando sesión');
-    
-  }).catch(error=>{
-    console.log('Error al cerrar',error);
-  });
-}
+};

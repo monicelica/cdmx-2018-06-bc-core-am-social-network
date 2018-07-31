@@ -1,84 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home</title>
-    <!-- fire store -->
-    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
-    <!--CSS-->
- 	<link rel="stylesheet" type="text/css" href="../css/style-home.css">
-     <!--BOOTSTRAP-->
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     <!--FONTS-->
-     <link href="https://fonts.googleapis.com/css?family=Merienda|Source+Sans+Pro:300|Pacifico|PT+Sans+Narrow|Bungee+Shade|Josefin+Sans" rel="stylesheet">
-      <!--ICONO FONTS-->
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home</title>
+  <!-- fire store -->
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+  <!--CSS-->
+  <link rel="stylesheet" type="text/css" href="../css/style-home.css">
+  <!--BOOTSTRAP-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+    crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--FONTS-->
+  <link href="https://fonts.googleapis.com/css?family=Merienda|Source+Sans+Pro:300|Pacifico|PT+Sans+Narrow|Bungee+Shade|Josefin+Sans"
+    rel="stylesheet">
+  <!--ICONO FONTS-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
 </head>
+
 <body class="cuerpo">
-<!--MENU-->
+  <!--MENU-->
 
-<nav class="navbar navbar-expand-lg  elemento-nav">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="fas fa-caret-down navbar-light color-hamburguesa"></span>
-      </button>
-        <h1 class="logo">Mom to mom </h1>
-      
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link sec" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-           
-            <!--MENU DESPLEGABLE-->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle sec" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Herramientas
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="especialista.html">Especialistas</a>
-                    <a class="dropdown-item" href="#">Articulos</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle sec" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Usuario
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Perfil</a>
-                  <a class="dropdown-item" href="#">Salir</a>
-              </div>
-          </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Escribe tu duda" aria-label="Search">
-            <button class="btn my-2 my-sm-0" type="submit">Buscar</button>
-          </form>
-        </div>
-      </nav>
+  <nav class="navbar navbar-expand-lg  elemento-nav">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="fas fa-caret-down navbar-light color-hamburguesa"></span>
+    </button>
+    <h1 class="logo">Mom to mom </h1>
 
-      <!--CUERPO-->
-      
-      <section class="container normal">
-         <article class="row">
-             <div class="col-xl-9 col-lg-9 col-md-10">
-                 <!--MURO-->
-                 <article class="row">
-                     <!--seccion donde se escribe comentario-->
-                     <div class="col-xl-12 col-lg-12 col-md-12 secciones">
-                        <input type="text" id ="comentario" class="comentario" placeholder="Escribe un comentario..">
-                        <button type="button"  id="editar" onclick="editar()" class="btn btn-outline-warning publicar">Editar</button>
-                        <button type="button"  id="boton" onclick="guardar()" class="btn btn-outline-warning publicar">Publicar</button>
-                     </div>
-                     <!--CAMPO DONDE SE RECIBE LOS COMENTARIOS-->
-                            <section id ="getcomentario" class="col-xl-12 col-lg-12 col-md-12">
-                                <!--<div class="col-xl-12 col-lg-12 col-md-12 comentario-publicado">
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link sec" href="#">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+
+        <!--MENU DESPLEGABLE-->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle sec" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            Herramientas
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="especialista.html">Especialistas</a>
+            <a class="dropdown-item" href="#">Articulos</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle sec" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            Usuario
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Perfil</a>
+            <a class="dropdown-item" href="#" onclick="logout()">Salir</a>
+          </div>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Escribe tu duda" aria-label="Search">
+        <button class="btn my-2 my-sm-0" type="submit">Buscar</button>
+      </form>
+    </div>
+  </nav>
+
+  <!--CUERPO-->
+
+  <section class="container normal">
+    <article class="row">
+      <div class="col-xl-9 col-lg-9 col-md-10">
+        <!--MURO-->
+        <article class="row">
+          <!--seccion donde se escribe comentario-->
+          <div class="col-xl-12 col-lg-12 col-md-12 secciones">
+            <form id="formularioPublicar">
+              <input type="text" id="comentario" class="comentario" placeholder="Escribe un comentario.." />
+              <input type="submit" id="boton" class="btn btn-outline-warning publicar" value="Publicar" />
+            </form>
+            <button id="publicarEditado" type="button" class="btn btn-outline-warning publicar">Editar</button>
+          </div>
+          <!--CAMPO DONDE SE RECIBE LOS COMENTARIOS-->
+          <section id="getcomentario" class="col-xl-12 col-lg-12 col-md-12">
+            <!--<div class="col-xl-12 col-lg-12 col-md-12 comentario-publicado">
                                 <div class="comentario">Como cargo a mi bebe?</div>-->
-                                    <!--BOTONES-->
-                                    <!--<div class="all-botones">
+            <!--BOTONES-->
+            <!--<div class="all-botones">
                                         <button type="button" class="btn boton-comentario">
                                             <img src="../images/editar2.png" class="img-comentario" alt="editar">Editar
                                         </button>
@@ -93,52 +105,48 @@
                                         </button>
                                     </div>
                                 </div>-->
-                            </section>  
-                        
-                 </article>
-             </div>
-                    <!--RECOMPENSAS-->
-                    <div class="col-xl-3 col-lg-3 col-md-2 secciones">
-                        <p class="titulo-recom">
-                            <img  src="../images/premio1.png" alt="mamilas">
-                            Recompensas!
-                        </p>
-                        <div>
-                            <div class="premios-titulo">
-                                <img  src="../images/numero-1.png" alt="mamilas">
-                                MAS de tres comentarios 
-                            </div>
-                            <img class="recompensa-img" src="../images/pañal.jpg" alt="mamilas">
-                        </div>
-                        <div>
-                                <img  src="../images/numero-2.png" alt="mamilas">
-                                MAS de tres LIKES por comentario 
-                                <img class="recompensa-img" src="../images/perfume.jpeg" alt="mamilas">
-                        </div> 
-                        <div>
-                                <img  src="../images/numero-3.png" alt="mamilas">
-                                MAS de tres LIKES por comentario 
-                                <img class="recompensa-img" src="../images/mamilas.png" alt="mamilas">
-                        </div>  
-                    </div>
-          </article>
-      </section>
+          </section>
 
-      <!--MOVIL-->
-      <section class="container movil">
-        <article class="row">
-              <!--seccion donde se escribe comentario-->
-              <div class="col-sm-12 secciones">
-                    <input type="text"  id ="comentario1" class="comentario" placeholder="Escribe un comentario..">
-                    <button type="button" class="btn btn-outline-warning publicar" id="editar1" onclick="editar1()">Editar</button>
-                    <button type="button" class="btn btn-outline-warning publicar" id="boton1" onclick="guardar1()">Publicar</button>     
-              </div>
-                <!--COMENTARIOS-->
-            <section id ="getcomentario1" class="col-sm-12">
-              <!--<div class="comentario-publicado">
+        </article>
+      </div>
+      <!--RECOMPENSAS-->
+      <div class="col-xl-3 col-lg-3 col-md-2 secciones">
+        <p class="titulo-recom">
+          <img src="../images/premio1.png" alt="mamilas"> Recompensas!
+        </p>
+        <div>
+          <div class="premios-titulo">
+            <img src="../images/numero-1.png" alt="mamilas"> MAS de tres comentarios
+          </div>
+          <img class="recompensa-img" src="../images/pañal.jpg" alt="mamilas">
+        </div>
+        <div>
+          <img src="../images/numero-2.png" alt="mamilas"> MAS de tres LIKES por comentario
+          <img class="recompensa-img" src="../images/perfume.jpeg" alt="mamilas">
+        </div>
+        <div>
+          <img src="../images/numero-3.png" alt="mamilas"> MAS de tres LIKES por comentario
+          <img class="recompensa-img" src="../images/mamilas.png" alt="mamilas">
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!--MOVIL-->
+  <section class="container movil">
+    <article class="row">
+      <!--seccion donde se escribe comentario-->
+      <div class="col-sm-12 secciones">
+        <input type="text" id="comentario1" class="comentario" placeholder="Escribe un comentario..">
+        <button type="button" class="btn btn-outline-warning publicar" id="editar1" onclick="editar1()">Editar</button>
+        <button type="button" class="btn btn-outline-warning publicar" id="boton1" onclick="guardar1()">Publicar</button>
+      </div>
+      <!--COMENTARIOS-->
+      <section id="getcomentario1" class="col-sm-12">
+        <!--<div class="comentario-publicado">
                     <div class="comentario">Como cargo a mi bebe?</div>-->
-                    <!--BOTONES-->
-                    <!--<div class="all-botones">
+        <!--BOTONES-->
+        <!--<div class="all-botones">
                         <button type="button" class="btn boton-comentario">
                             <img src="../images/editar1.png" class="img-comentario" alt="editar">Editar
                         </button>
@@ -153,28 +161,20 @@
                         </button>
                     </div>
               </div>-->
-          </section>
-        </article>
       </section>
+    </article>
+  </section>
 
-      
-
-
-
-
-
-
-      
-
-
-
-
-    <!-- MI JS -->
-    <script src = "../js/app-coment.js"></script>
-    <script src = "../js/app-coment-movil.js"></script>
-    <!--BOOTSTRAP-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+  <!-- MI JS -->
+  <script src="../js/app-coment.js"></script>
+  <!-- <script src = "../js/app-coment-movil.js"></script> -->
+  <!--BOOTSTRAP-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
