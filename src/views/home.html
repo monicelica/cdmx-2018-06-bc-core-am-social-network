@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--icono pestaña-->
+  <link rel="shortcut icon" href="../images/orange.png">
   <title>Home</title>
   <!-- fire store -->
   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
@@ -49,7 +51,6 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="especialista.html">Especialistas</a>
-            <a class="dropdown-item" href="#">Articulos</a>
           </div>
         </li>
         <li class="nav-item dropdown">
@@ -58,7 +59,6 @@
             Usuario
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Perfil</a>
             <a class="dropdown-item" href="#" onclick="logout()">Salir</a>
           </div>
         </li>
@@ -72,7 +72,7 @@
 
   <!--CUERPO-->
 
-  <section class="container normal">
+  <section class="container">
     <article class="row">
       <div class="col-xl-9 col-lg-9 col-md-10">
         <!--MURO-->
@@ -110,60 +110,29 @@
         </article>
       </div>
       <!--RECOMPENSAS-->
-      <div class="col-xl-3 col-lg-3 col-md-2 secciones">
+      <div class="col-xl-3 col-lg-3 col-md-2 secciones normal">
         <p class="titulo-recom">
           <img src="../images/premio1.png" alt="mamilas"> Recompensas!
         </p>
         <div>
           <div class="premios-titulo">
-            <img src="../images/numero-1.png" alt="mamilas"> MAS de tres comentarios
+            <img src="../images/numero-1.png" alt="mamilas"> MÁS de tres comentarios
           </div>
-          <img class="recompensa-img" src="../images/pañal.jpg" alt="mamilas">
-        </div>
-        <div>
-          <img src="../images/numero-2.png" alt="mamilas"> MAS de tres LIKES por comentario
           <img class="recompensa-img" src="../images/perfume.jpeg" alt="mamilas">
         </div>
         <div>
-          <img src="../images/numero-3.png" alt="mamilas"> MAS de tres LIKES por comentario
+          <img src="../images/numero-2.png" alt="mamilas"> MÁS de tres LIKES por comentario
+          <img class="recompensa-img" src="../images/producto.jpg" alt="mamilas">
+        </div>
+        <div>
+          <img src="../images/numero-3.png" alt="mamilas"> MÁS de seis LIKES por comentario
           <img class="recompensa-img" src="../images/mamilas.png" alt="mamilas">
         </div>
       </div>
     </article>
   </section>
 
-  <!--MOVIL-->
-  <section class="container movil">
-    <article class="row">
-      <!--seccion donde se escribe comentario-->
-      <div class="col-sm-12 secciones">
-        <input type="text" id="comentario1" class="comentario" placeholder="Escribe un comentario..">
-        <button type="button" class="btn btn-outline-warning publicar" id="editar1" onclick="editar1()">Editar</button>
-        <button type="button" class="btn btn-outline-warning publicar" id="boton1" onclick="guardar1()">Publicar</button>
-      </div>
-      <!--COMENTARIOS-->
-      <section id="getcomentario1" class="col-sm-12">
-        <!--<div class="comentario-publicado">
-                    <div class="comentario">Como cargo a mi bebe?</div>-->
-        <!--BOTONES-->
-        <!--<div class="all-botones">
-                        <button type="button" class="btn boton-comentario">
-                            <img src="../images/editar1.png" class="img-comentario" alt="editar">Editar
-                        </button>
-                        <button type="button" class="btn boton-comentario">
-                            <img src="../images/cubo-de-la-basura1.png" class="img-comentario" alt="editar">Borrar
-                        </button>
-                        <button type="button" class="btn boton-comentario">
-                            <img src="../images/corazon-en-boceto1.png" class="img-comentario" alt="editar">Like
-                        </button>
-                        <button type="button" class="btn boton-comentario">
-                            <img src="../images/corazon1.png" class="img-comentario" alt="editar">Dislike
-                        </button>
-                    </div>
-              </div>-->
-      </section>
-    </article>
-  </section>
+  
 
   <!-- MI JS -->
   <script src="../js/app-coment.js"></script>
