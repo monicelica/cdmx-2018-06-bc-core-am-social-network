@@ -20,13 +20,6 @@ El estudio reporta que este grupo de madres internautas busca sitios electrónic
 
 En lo que respecta a las compras en línea, se informa que este sector es muy participativo en comparación con generaciones anteriores. Una de cada cuatro mamas de la generación adquiere productos por internet relacionados con ropa, electrónica, servicios financieros y cuidado personal, entre otros. 
 
-### **Ideación:**
-
-### **Ideación:**
-
-
-
-
 #### **Entrevistas:**
 
 Se realizaron 25 entrevistas con 15 preguntas con  el fin de recabar información, que nos guiara en la identificación  de las necesidades  y las inquietudes de estas madres, obteniendo los siguientes resultados:
@@ -48,6 +41,10 @@ Se realizaron 25 entrevistas con 15 preguntas con  el fin de recabar informació
 
 La edad promedio de las entrevistadas fue de 25 a 34 años, la mayoría profesionistas (48%), con un promedio de 1 a2 hijos, con edades de 0 a 24 meses. La edad promedio de su primer alumbramiento fue de los 19 a los 24 años. La mayoría de sus fuentes de información sobre temas relacionados sobre la crianza de su bebe fue promedio de su familia (71.4%), quedando en segundo lugar internet (53%) y revistas sobre el tema en tercero (35.7%).De las redes sociales que más consultaron destaca FB(48%), Mi bebe y yo (32%) entre otros foros de revistas, la información la consultaron la mayoría desde su dispositivo móvil (60%), el 40% consulta diario estas redes. Los temas más consultados fueron salud y alimentación, mitos y cuidados y salud infantil, sobre los temas de mitos que más les llamaron la atención  están: cuidados del recién nacido, lactancia materna y alimentación infantil. El 67% de las mamás resolvieron sus dudas. Al preguntar si estarían dispuestas a participar en una red social aportando y consultando estos temas sobre romper mitos el  76% consultaría, ya que se sentirían en confianza de compartir estas dudas con otras mamás con mayor experiencia y de igual forma  el 92% participarían compartiendo experiencias para ayudar para resolver dudas.
 
+### **Motivacion del negocio:**
+
+### **Objetivo del negocio:**
+
 ### **Usuarixs y necesidades:**
 
 México es un país multicultural por su diversidad étnica, por ende, es rico en creencias y tradiciones (muchas veces erróneas que podrían llegar incluso a perjudicar la salud). Son muchas las creencias y los mitos que rodean el cuidado del menor cuando está recién nacido y a lo largo de sus primeros años de vida y es frecuente que algunas madres primerizas se enfrenten a una serie de temores y dudas al ingresar a un mundo totalmente nuevo, independientemente de su estatus social  o nivel de educación. Al surgir todas estas dudas  recurren a personas con mayor experiencia en el tema y acogen estas creencias y mitos  ya sea por presión social o tradición.
@@ -60,7 +57,7 @@ Los beneficios obtenidos al hacer uso de esta red social, es que como usuaria pu
 
 #### **Incentivos:**
 
-Se ha pensado en  reclutar a las usuarias y mantener un portafolio de  “Súper mamás” las cuáles serán las usuarias con mayor actividad en la página, ya sea por consulta de algún tema o por resolver dudas de otra usuaria. A estas “Súper mamás”  se les gratificara por medio de incentivos que se medirán por medio de likes. Mensualmente se llevara a cabo un sorteo donde se premiara a la mami más activa y con mayor número de registro de likes en  sus publicaciones.   
+Se ha pensado en  reclutar a las usuarias y mantener un portafolio de  “Súper mamás” las cuáles serán las usuarias con mayor actividad en la página, ya sea por consulta de algún tema o por resolver dudas de otra usuaria. A estas “Súper mamás”  se les gratificara por medio de incentivos que se medirán por medio de likes. Mensualmente se llevara a cabo un 0sorteo donde se premiara a la mami más activa y con mayor número de registro de likes en  sus publicaciones.   
 
 ### **Historia de usuarix:**
 
@@ -102,7 +99,25 @@ https://www.figma.com/file/SacBbSk4Wst6RTG1jvTng0G3/Untitled?node-id=20%3A2
 ### **User testing:** 
 
 ### **Argumentacion de Visual Desing:** 
+
+
 #### **Login:** 
+![Dispositivo login movil](src/images/dm_login.png)
+![Responsive login](src/images/responsive_login.png)
+#### **Home:** 
+![Dispositivo movil home](src/images/dm_home.png)
+![Responsive home](src/images/responsive_home.png)
+#### **Consulta especialistas:** 
+![Responsive especialistas](src/images/responsive_especialista.png)
+#### **Paleta de colores:** 
+![Paleta de colores](src/images/paleta_colores.png)
+#### **Tipografia:**
+![Tipografia titulo](src/images/tipografia1.png)
+![Tipografia recompensas](src/images/tipografia2.png)
+![Tipografia muro](src/images/tipografia3.png)
+
+#### **Navegacion movil:**
+![Navegacion movil](src/images/navegacion_movil.png)
 
 
 
