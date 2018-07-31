@@ -48,7 +48,7 @@ const loginFace= () => {
       // ...
     }).catch(function(error) {
       // Handle Errors here.
-      let errorCode = error.code;
+      let errorCode = errorhttp://127.0.0.1:5500.code;
       let errorMessage = error.message;
       // The email of the user's account used.
       let email = error.email;
@@ -93,9 +93,6 @@ const observador = () => {
     });
 }
 observador();
-
-
-
 
 
 //verificar el correo electronico con el que se esta registrando
