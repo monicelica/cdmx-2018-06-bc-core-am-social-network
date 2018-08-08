@@ -98,8 +98,12 @@ const observador = () => {
         phoneNumber: user.phoneNumber
       }));
 
+      let homePage = './views/home.html';
+      if (location.pathname.indexOf('views') > -1) {
+        homePage = './home.html';
+      }
       // redirecciona al timeline
-      return location.href = './views/home.html';
+      return location.href = homePage;
     } else {
       // User is signed out.
       console.log('Inicia sesión.');
@@ -131,7 +135,7 @@ const verificar = () => {
       alert('Enviando correo..');
     }).catch((error) => {
       // An error happened.
-      alert('error');
+      console.error('error');
     });
 };
 
